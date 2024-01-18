@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>E-Mongolia</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+function welcome() {
+  event.preventDefault(); // Prevent default form submission
+
+  var pass1 = "orgil123";
+  var pass2 = "bilguun123";
+  var password = document.getElementById("psw").value;
+
+  if (password === pass1) {
+    window.location.assign("my-account/document/orgil.html");
+  } else if (password === pass2) {
+    window.location.assign("my-account/document/bilguun.html");
+  } else {
+    window.location = "https://e-mongolia.mn/Home";
+  }
+}
+</script>
+
+<style>
+/* Your CSS styles here */
+</style>
+</head>
+<body>
+
+<h2>LOGIN FORM</h2>
+
+<div id="id01" class="modal">
+  <form class="modal-content animate" onsubmit="welcome(); return false;">
+    <div class="imgcontainer">
+      <!-- Your image container content -->
+    </div>
+
+    <div class="container">
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" id="psw" required>
+      <button type="submit">Login</button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <!-- Additional container content -->
+    </div>
+  </form>
+</div>
+
+<script>
+// Your script for closing the modal when clicking outside
+</script>
+
+</body>
+</html>

@@ -1,0 +1,474 @@
+/* css */
+:root{
+    --blue-text: #1D43E0;
+}
+.dark-theme{
+    --blue-text: #637DAA;
+}
+
+
+
+/* Responsive */
+@media only screen and (max-width: 360px) {
+    /* .form-check p{ */
+        /* padding-bottom: 10px; */
+        /* font-size: 10px !important; */
+    /* } */
+    .form-check-input{
+        /* width: 30px !important; */
+        margin-top: 5px;
+    }
+}
+@media only screen and (max-width: 423px) {
+    #danImg{
+        width: 100px !important;
+    }
+    .dan-text{
+        font-size: 14px !important;
+    }
+    .form{
+        margin-top: 20px;
+    }
+    .tagNav a{
+        padding: 10px 0 !important;
+    }
+    .title-1{
+        margin-top: -30px !important;
+        padding-bottom: 10px;
+    }
+
+    /* #buttomBtns .tab{
+        width: 100% !important;
+        margin: 10px 0 !important;
+    } */
+    /* .form-check p{
+        padding-top: 2px;
+        font-size: 12px;
+    } */
+    #formInput .inputStyle{
+        padding: 10px 15px;
+        box-shadow: none;
+    }
+    ::placeholder{
+        font-size: 12px !important;
+    }
+    /* .linkText{
+        font-size: 12px;
+    } */
+    #footerFlexer {
+        text-align: center;
+        /* font-size: 12px; */
+    }
+    .togglePassword{
+        right: 4%;
+        width: 23px;
+    }
+    .accessibe{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    header{
+        padding: 5px 0;
+        line-height: 15px;
+    }
+    .header .nav{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 20px 10px;
+        /* background-color: red; */
+        margin: 0;
+        padding: 0;
+
+    }
+
+    #bottomBtns{
+        display: flex !important;
+    }
+    .btns{
+        display: none !important;
+    }
+
+    #panel-back.active {
+        position: fixed !important;
+        bottom: 0 !important;
+    }
+
+    header .nav-link{
+        padding: 0px;
+        margin: 0;
+    }
+    .custom-btn{
+        padding: 10px !important;
+        margin-top: -10px !important;
+    }
+    .nav div .btn{
+        padding: 15px 15px !important;
+    }
+    .nav li{
+        margin: 0 10px;
+    }
+    .md-design{
+        margin-bottom: 20px 0 !important;
+    }
+    .btns{
+        display: flex;
+        justify-content: space-between;
+    }
+    .form{
+        width: 90%;
+    }
+    .bubbles{
+        display: none;
+    }
+
+    .custom-fixed {
+        position: relative;
+    }
+    header .nav-link{
+        line-height: 1px;
+    }
+    .custom-btn{
+        line-height: 1px;
+    }
+    .nav-link{
+        padding: 20px 0;
+    }
+    .form .nav-link{
+        font-size: 0.7em;
+    }
+    .form .title-1{
+        font-size: 1.5em;
+    }
+    .form .btns{
+        flex-direction: column;
+        margin: 5px 0;
+    }
+    .form .btns a{
+        font-size: 0.9em;
+
+    }
+    .left-section{
+        margin-bottom: 0 !important;
+    }
+    ::placeholder{
+        font-size: 0.7em;
+    }
+    .toggleLogo img{
+        width: 50px;
+        height: 50px;
+        left: 30px;
+        bottom: 50px;
+    }
+    .panel{
+        width: 100%;
+        height: 100%;
+    }
+    .panel-body{
+        position: absolute;
+        /* display: block; */
+        height: 90%;
+        width: 90%;
+        left: 5%;
+        /* bottom: 40%; */
+    }
+
+    .panel-head-back h2{
+        font-size: 20px;
+    }
+    .panel-center{
+        left: 20px;
+    }
+    .mobile-grid{
+        display: grid;
+        grid-template-columns: auto auto;
+
+    }
+    #reset{
+        font-size: 14px !important;
+        padding-top: 10px !important;
+    }
+    #textIcon, #invertIcon, #linkIcon,#mouseIcon{
+        width: 20px !important;
+    }
+    .box{
+        padding: 5px;
+        line-height: 0.6em;
+    }
+    .box img{
+        width: 30px;
+    }
+    .box p{
+        font-size: 10px;
+    }
+    .bank-box p {
+        font-size: 14px;
+    }
+    .alert div{
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .alert img{
+        width: 36px;
+    }
+    #clsNotif{
+        width: 25px !important;
+    }
+
+    #about{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    #about div{
+        justify-content: center !important;
+        text-align: center !important;
+        margin: 0 auto;
+    }
+    .blueText{
+        color: var(--blue-text) !important;
+    }
+    /* #aboutTitle{
+        height: 235px;
+    } */
+    .padd-x{
+        padding: 0 20px;
+    }
+    #aboutTitle h2{
+        font-size: 20px !important;
+        /* left: 5%; */
+        padding: 0 20px;
+    }
+    .next-prev button{
+        font-size: 10px !important;
+    }
+    .title-contract{
+        font-size: 18px !important;
+    }
+    .ded-title{
+        font-size: 16px !important;
+    }
+    .contact-text{
+        font-size: 14px !important;
+    }
+    .contact-text-blck{
+        font-size: 14px;
+    }
+    ::placeholder{
+        font-size: 16px;
+    }
+    .active-tab{
+        /* margin-left: 5px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center !important;
+    }
+    #alphabet{
+        width: 80%;
+        top: 29%;
+    }
+    .alphabetList{
+        grid-template-columns: repeat(5, 1fr);
+        margin-bottom: 20px;
+        padding: 0 5px;
+    }
+
+    .regHeader{
+        font-size: 14px;
+    }
+    .item{
+        padding: 10px 0;
+        margin: 3px;
+    }
+    #m1, #m2{
+        display: flex;
+    }
+    #r, #d {
+        display: none;
+    }
+    .footer{
+        z-index: 500;
+    }
+    .footer #footerFlexer{
+        flex-direction: column;
+        /* line-height: 0.5em; */
+    }
+
+    .footer #footerFlexer p {
+        margin-bottom: 10px;
+    }
+    .dann{
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    .tagNav a:nth-child(2){
+        display: none;
+    }
+    .dan-text{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    #danImg{
+        width: 130px;
+    }
+}
+
+/* Pad & Tab */
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+  
+    .left-section{
+        margin-bottom: 0;
+        
+    }
+    .form{
+        width: 90%;
+    }
+    .bubbles{
+        display: none;
+    }
+    .custom-fixed {
+        position: relative;
+    } 
+    #danImg{
+        width: 60vh;
+    }
+    .form{
+        width: 70%;
+    }
+    .title-contract{
+        font-size: 18px !important;
+    }
+    .ded-title{
+        font-size: 16px !important;
+    }
+    .contact-text{
+        font-size: 14px !important;
+    }
+    .contact-text-blck{
+        font-size: 14px;
+    }
+    #footerFlexer{
+        display: grid !important;
+        grid-template-columns: 35% 65% !important;
+        gap: 20px;
+    }
+    .dann{
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    .dan-text{
+        font-size: 25px;
+        line-height: 28px;
+    }
+    #danImg{
+        width: 200px;
+    }
+}
+@media only screen and (min-width: 1023px) and (max-width: 1403px){
+    /* #footerFlexer{
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px;
+    } */
+    #rights{
+        display: none;
+    }
+    .form{
+        margin-bottom: 220px;
+    }
+    .left-section{
+        margin-bottom: 220px;
+    }
+    .dan-text{
+        font-size: 30px;
+    }
+}
+@media only screen and (min-width: 990px) and (max-width: 1317px){
+    .dann{
+        left: 10;
+    }
+    .dan-text{
+        font-size: 22px;
+        line-height: 18px;
+    }
+    .custom-card-wrapper{
+        margin: 0;
+        height: 100%;
+    }
+    .form{
+        margin: 20px 0 100px 0;
+        padding: 0;
+        width: 90vh;
+    }
+   
+}
+@media only screen and (min-width: 768px) and (max-width: 1211px){
+    /* Here  */
+    .btns .tab{
+        padding: 10px;
+    }
+    .active-tab{
+        padding: 10px;
+    }
+    .active-tab img{
+        display: none;
+    }
+}
+@media only screen and (max-height: 831px){
+    /* Here  */
+    .btns .tab{
+        padding: 10px;
+    }
+    .active-tab{
+        padding: 10px;
+    }
+    .active-tab img{
+        display: none;
+    }
+}
+@media only screen and (min-width: 1404px) and (max-width: 1437px){
+    .dan-text{
+        font-size: 30px;
+    }
+    
+}
+
+@media only screen and (max-width: 1161px){
+    .dann{
+        left: 10px !important;
+    }
+}
+
+@media only screen and (max-height: 900px){
+    /* .tagNav{
+        padding: 10px 0;
+    } */
+    .tagNav a{
+        padding: 15px 0;
+    }
+    .title-1{
+        margin-top: -10px;
+        font-size: 18px;
+    }
+    .btns a{
+        line-height: 1;
+    }
+    .inputStyle {
+        padding: 8px;
+    }
+    .btn-cus{
+        padding: 8px 0;
+    }
+    /* .custom-fixed{
+        position: relative;
+        
+    } */
+    .form{
+        margin-bottom: 80px;
+    }
+    
+}

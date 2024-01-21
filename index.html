@@ -1,134 +1,630 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="iconLogo.ico">
+    <!-- library -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
 
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/fonts.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <!-- Popovers -->
+    <link href="css/bootstrap.min_1.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/jquery.toast.css">
+    <!-- Font size customize -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
+    <!-- Line height customize -->
+    <script src="js/tinymce.min.js"></script>
+    <!-- own -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <title>ДАН | Танилт нэвтрэлтийн систем</title>
 </head>
-
-<style>
-
-body {
-
-	background-image: url('grunge_patterns.jpg');
-	background-attachment: fixed;
-	color: #333;
-}
-
-.box {
-	border-radius: 3px;
-	background: rgba(101, 101, 101, 0.7); margin: auto; padding: 12px;
-}
-
-.lightbox {
-	zoom: 1.5;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(10, 10, 10, 0.8);
-	text-align: center;
-	margin: auto;
-
-}
-
-div.horizontal {
-	display: flex;
-	justify-content: center;
-	height: 100%;
-}
-
-div.vertical {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	width: 100%;
-}
-
-::-webkit-input-placeholder {
-   color: #955;
-   text-align: center;
-}
-
-::-moz-placeholder {
-   color: #955;
-   text-align: center;
-}
-
-:-ms-input-placeholder {
-   color: #955;
-   text-align: center;
-}
-
-</style>
-
 <body>
 
-	<div id="loginbox" class="lightbox" >
-		<div class="horizontal">
-			<div class="vertical">
-				<div class="box">
-					<input style="margin: 16px; text-align: center;" id="password" type="password" placeholder="password" /> <br />
-					<button id="loginbutton" type="button">Enter</button>
-					<p id="wrongPassword" style="display: none">wrong password</p>
-				</div>
-			</div>
-		</div>
-	</div>
+<header>
+    <nav class="header">
+        <ul class="nav justify-content-center">
+            <li>
+                <div class="btn-group">
+                    <button class="switcher btn dropdown-toggle custom-btn" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                        
+                            Хэл сонгох
+                        
+                    </button>
+                    <ul class="dropdown-menu defaultDropdown" aria-labelledby="defaultDropdown">
+                        <li><a href="/language/mn">Монгол</a></li>
+                        <li><a href="/language/en">English</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link custom-btn text-decoration-none md-design" href="#" tabindex="-1" aria-disabled="true" onclick="darkMode()" style="border: none"><img id="isDarkMode" src="images/sun.svg" style="padding-right: 5px;"><span id="darkModeValue">Өдрийн горим</span></button>
+            </li>
+        </ul>
+    </nav>
+</header>
 
 
 
-	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script>
+
+    function darkMode() {
+        var dark = document.getElementById('isDarkMode');
+        let danImg = document.getElementById('danImg');
+        var nameValue = document.getElementById('darkModeValue');
+        var night = 'Шөнийн горим';
+        var day = 'Өдрийн горим';
+
+        document.body.classList.toggle("dark-theme");
+
+        if (document.body.classList.contains("dark-theme")) {
+            dark.src = '/static/assets/img/moon.svg';
+            danImg.src = '/static/assets/img/dark-logo.webp';
+            nameValue.innerText = night;
+        } else {
+            dark.src = '/static/assets/img/sun.svg';
+            danImg.src = '/static/assets/img/light-logo.webp';
+            nameValue.innerText = day;
+        }
+    };
+
+</script>
 
 
-	 <script type="text/javascript" src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha1.js"></script>
 
-	<script type="text/javascript">
-	"use strict";
+<section>
+    <div class="container-fluid">
+        <div id="main" class="row d-flex align-items-center justify-content-center">
+            <div class="col-lg-6 col-md-12 col-sm-10 left-section position-relative">
+                <div class="d-flex align-items-center justify-content-center dann">
+                    <img id="danImg" src="images/light-logo.webp" alt="Dan_logo_lightmode">
+                    <p class="dan-text">Танилт нэвтрэлтийн<br> систем</p>
+                </div>
+            </div>
+
+            
+
+    <!-- Нэвтрэх хэсэг -->
+    <div id="login" class="col-lg-6 col-md-14 col-sm-12 d-flex justify-content-center">
+        <div class="form">
+            <div class="tagNav">
+                <a href="/login?response_type=code" style="border-top-left-radius: 20px;" class="active">Иргэн</a>
+                <a href="/login/organization?response_type=code">Байгууллага</a>
+                <a href="/login/foreign?response_type=code" style="border-top-right-radius: 20px;">Foreigner</a>
+            </div>
+            <div id="ct" class="tab-content custom-card-wrapper back shadow-none">
+                <!-- Иргэн нэтрэх -->
+                <div class="tab-pane fade show active shadow-none" id="citizen" role="tabpanel" aria-labelledby="pill-citizen-tab">
+                    <div class="newtreh">
+                        <a href="#" class="activePage">Нэвтрэх</a>
+                        <a href="/register?response_type=code">Бүртгүүлэх</a>
+                    </div>
+                    <div class="headerTitle">
+                        <h2 class="title-1" aria-label="Нэвтрэх" tabindex="0">Нэвтрэх</h2>
+                    </div>
+                    <div class="btns mb-3 tabs">
+                        <a class="btn active-tab" id="otp"><img src="images/Mail.svg"> Нэг удаагийн кодоор</a>
+                        <a href="/login_bank?response_type=code" class="btn tab">Банкны эрх</a>
+                        <a href="/login_signature?response_type=code" class="btn tab">Тоон гарын үсэг</a>
+                    </div>
+
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="checkRegNo" onclick="isCheck()" checked="">
+                        <label for="checkRegNo" class="form-check-label text-decoration-none" style="color: #637DAA;">�&nbsp;егистрийн дугаараар нэвтрэх</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="checkBurgtel" onclick="isCheck1()">
+                        <label for="checkBurgtel" class="form-check-label text-decoration-none" style="color: #637DAA;">Бүртгэлийн дугаараар нэвтрэх
+                            <span id="myTooltip" type="button" class="" data-toggle="tooltip" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" title="Бүртгэлийн дугаар нь иргэн таны 12 орон бүхий бүртгэлийн дугаар юм.  <img src='/static//assets/img/citizen-identity.png' id='citizen-identity' >">
+                                <img src="images/Circle_Question.svg" style="width: 15px;">
+                            </span>
+                        </label>
+                    </div>
+
+                    <form action="/login?response_type=code" id="formInput" method="POST">
+                        
+                            
+                            <div class="form-group mt-3 mb-3 flexRegister" id="regNoo">
+                                <input type="hidden" id="regnum" name="regnum">
+                                    <div class="rd1" id="r">�&nbsp;</div>
+                                    <div class="rd2" id="d">Д</div>
+                                    <!-- Mobile Alphabet -->
+                                    <div class="rd1" id="m1" data-bs-toggle="modal" href="#alphabetModal" role="button" data-target="#alphabetModal">�&nbsp;
+                                    </div>
+                                    <div class="rd2" id="m2" data-bs-toggle="modal" href="#alphabetModal" role="button" data-target="#alphabetModal">Д
+                                    </div>
+                                    <input type="tel" class="form-control inputStyle" id="regNo" aria-describedby="emailHelp" placeholder="Дугаар" value="">
+                            </div>
+                            <div class="form-group mt-3 mb-3" id="orgNoo">
+                                <input name="civil_id" type="tel" class="form-control inputStyle" id="orgNo" aria-describedby="emailHelp" value="" placeholder="Бүртгэлийн дугаар /12 орон бүхий дугаар 11**********/">
+                            </div>
+
+                            
+
+                            <div id="form-pass" class="form-group mb-3 form-pass">
+                                <input name="password" type="password" class="form-control inputStyle" id="password" placeholder="Нууц үг" required="">
+                                <p id="wrongPassword" style="display: none">wrong password</p>
+                                <img src="images/Eye.svg" id="togglePassword" class="togglePassword" onclick="eyeToggler()" alt="Eye icon">
+                            </div>
+
+                            
+
+                        
+
+                        
+                            
+                        
+
+                        
+                            
+                        
+
+                        <!-- Forget password -->
+                        <div>
+                            <img src="images/Circle_Question.svg" style="width: 15px;">
+                            <a href="/forgot/password?response_type=code" class="text-decoration-none linkText blueText" alt="Circle question">Нууц үгээ мартсан уу?</a>
+                        </div>
+                        <!-- Change phone number -->
+                        <div>
+                            <img src="images/Mobile.svg" style="width: 15px;" alt="Mobile icon">
+                            <a href="/change/phone?response_type=code" class="text-decoration-none linkText blueText">Бүртгэлтэй утасны дугаараа солих</a>
+                        </div>
+                        <!-- Login button -->
+                        <div class="mt-4 mb-4">
+                            <button type="button" id="loginbutton" class="btn-cus btn btn-primary btn-lg">Нэвтрэх</button>
+                        </div>
+                    </form>
+
+                    <!-- Alphabet Letters -->
+<div id="alphabet" class="loginAlphabet">
+    <h5 id="reghead" class="regHeader">�&nbsp;Д эхний үсгээ сонгоно уу</h5>
+    <div class="alphabetList">
+        <p class="item">А</p>
+        <p class="item">Б</p>
+        <p class="item">В</p>
+        <p class="item">Г</p>
+        <p class="item">Д</p>
+        <p class="item">Е</p>
+        <p class="item">Ё</p>
+        <p class="item">Ж</p>
+        <p class="item">З</p>
+        <p class="item">И</p>
+        <p class="item">Й</p>
+        <p class="item">К</p>
+        <p class="item">Л</p>
+        <p class="item">М</p>
+        <p class="item">Н</p>
+        <p class="item">О</p>
+        <p class="item">Ө</p>
+        <p class="item">П</p>
+        <p class="item">�&nbsp;</p>
+        <p class="item">С</p>
+        <p class="item">Т</p>
+        <p class="item">У</p>
+        <p class="item">Ү</p>
+        <p class="item">Ф</p>
+        <p class="item">Х</p>
+        <p class="item">Ц</p>
+        <p class="item">Ч</p>
+        <p class="item">Ш</p>
+        <p class="item">Щ</p>
+        <p class="item">Ъ</p>
+        <p class="item">Ы</p>
+        <p class="item">Ь</p>
+        <p class="item">Э</p>
+        <p class="item">Ю</p>
+        <p class="item">Я</p>
+    </div>
+</div>
+
+                    <div id="bottomBtns" class="btns mb-3 tabs">
+                        <p style="text-align: center;">Эсвэл</p>
+                        <a href="/login_bank?response_type=code" class="btn tab">Банкны эрхээр нэвтрэх</a>
+                        <a href="/login_signature?response_type=code" class="btn tab">Тоон гарын үсгээр нэвтрэх</a>
+                        <a href="/child/login?response_type=code" class="btn tab">Хүүхдээр нэвтрэх</a>
+                    </div>
+
+                    <!-- Register -->
+                    <div class="text-center">
+                        <div class="row">
+                            <div class="col-md-6"><a href="/register?response_type=code" id="register" class="fw-normal text-decoration-none" style="color: #637DAA;">Шинээр бүртгүүлэх үү?</a></div>
+                            
+                                <div class="col-md-6"><a href="/child/login?response_type=code" id="register" class="fw-normal text-decoration-none" style="color: #637DAA;">Хүүхдээр нэвтрэх үү?</a>
+                                </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Байгууллага нэтрэх -->
+                <div class="tab-pane fade" id="organization" role="tabpanel" aria-labelledby="pill-org-tab">
+                    <div>
+                        <h2 class="title-1">Нэвтрэх</h2>
+                    </div>
+                    <div class="btns mb-4 d-flex justify-content-start tabs">
+                        <a class="btn active-tab"><img src="images/flash.png"> Тоон гарын үсгээр</a>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked="">
+                        <label class="form-check-label" for="exampleRadios1">
+                            Тоон гарын үсэг <a href="https://ra.datacenter.gov.mn/software/installer">(Тоон гарын үсгийн клиент програм татах)</a>
+                        </label>
+                    </div>
+                    <div>
+                        <form id="formInput1">
+                            <div class="form-group mt-3">
+                                <input type="text" class="form-control inputStyle" id="regNo1" aria-describedby="emailHelp" placeholder="�&nbsp;егистрийн дугаар">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="mt-4 mb-4">
+                        <button type="button" class="btn-cus btn btn-primary btn-lg ">Нэвтрэх</button>
+                    </div>
+                </div>
+                <!-- Гадаад хүн нэвтрэх -->
+                <div class="tab-pane fade" id="foreigner" role="tabpanel" aria-labelledby="pill-foreigner-tab">
+                    <div>
+                        <h2 class="title-1">Нэвтрэх</h2>
+                    </div>
+                    <div class="btns mb-4 d-flex justify-content-start tabs">
+                        <a class="btn active-tab"><img src="images/Mail.svg"> Via OTP</a>
+                        <!-- <a href="/static/assets/pages/bank.html" class="btn tab">Банкны эрх</a>
+                        <a href="/static/assets/pages/toon.html" class="btn tab">Тоон гарын үсэг</a> -->
+                    </div>
+                    <div>
+                        <form id="formInput2">
+                            <div class="form-group mt-3">
+                                <input type="text" class="form-control inputStyle" id="regNoF" aria-describedby="emailHelp" placeholder="F registration number">
+                            </div>
+                            <div class="form-group mt-3 mb-3">
+
+                                <input type="password" class="form-control inputStyle" id="passF" placeholder="Password">
+                            </div>
+                        </form>
+                    </div>
+                    <div>
+                        <img src="images/Circle_Question.svg" style="width: 15px;">
+                        <a href="#" class="fw-normal text-decoration-none" alt="Circle question" style="color: #637DAA;">Нууц үгээ мартсан уу?</a>
+                    </div>
+                    <div class="mt-4 mb-4">
+                        <button type="button" class="btn-cus btn btn-primary btn-lg ">Нэвтрэх</button>
+                    </div>
+                    <div class="text-center">
+                        <a href="/register?response_type=code" id="register" class="fw-normal text-decoration-none" style="color: #637DAA;">Шинээр бүртгүүлэх</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alphanbet Modal for mobile -->
+<div class="modal fade loginAlphabet" id="alphabetModal" aria-hidden="true" aria-labelledby="alphabetModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" style="z-index: 2000 !important;">
+        <div class="modal-content" style="z-index: 99999px !important; position: fixed; bottom: 0; left: 0; right: 0;">
+            <div class="modal-body">
+                <div id="alphabet1">
+                    <h5 id="reghead" class="regHeader">�&nbsp;Д эхний үсгээ сонгоно уу</h5>
+                    <div class="alphabetList">
+                        <p class="item">А</p>
+                        <p class="item">Б</p>
+                        <p class="item">В</p>
+                        <p class="item">Г</p>
+                        <p class="item">Д</p>
+                        <p class="item">Е</p>
+                        <p class="item">Ё</p>
+                        <p class="item">Ж</p>
+                        <p class="item">З</p>
+                        <p class="item">И</p>
+                        <p class="item">Й</p>
+                        <p class="item">К</p>
+                        <p class="item">Л</p>
+                        <p class="item">М</p>
+                        <p class="item">Н</p>
+                        <p class="item">О</p>
+                        <p class="item">Ө</p>
+                        <p class="item">П</p>
+                        <p class="item">�&nbsp;</p>
+                        <p class="item">С</p>
+                        <p class="item">Т</p>
+                        <p class="item">У</p>
+                        <p class="item">Ү</p>
+                        <p class="item">Ф</p>
+                        <p class="item">Х</p>
+                        <p class="item">Ц</p>
+                        <p class="item">Ч</p>
+                        <p class="item">Ш</p>
+                        <p class="item">Щ</p>
+                        <p class="item">Ъ</p>
+                        <p class="item">Ы</p>
+                        <p class="item">Ь</p>
+                        <p class="item">Э</p>
+                        <p class="item">Ю</p>
+                        <p class="item">Я</p>
+                    </div>
+                    <div data-bs-dismiss="modal" aria-label="Close" class="closeModal">Хаах</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
-	function loadPage(pwd) {
+            <p class="hidden" id="dark_mode" data-dark="None" data-mobile="None"></p>
+        </div>
+    </div>
+</section>
 
-		var hash= pwd;
-		hash= Sha1.hash(pwd);
-		var url= hash + "/index.html";
+<section class="accessibe">
+    <div id="panel-back" onclick="AccessibePanelClose()" class="position-absolute top-0 bottom-0 left-0 right-0 w-100 h-100" style="z-index: 10; background-color: black; opacity: 0.3;">
+    </div>
+    <div class="toggleLogo">
+        <p onclick="AccessibePanelOpen()">
+            <img src="images/Accessibility_default.png" class="openn" alt="Accessibility logo">
+        </p>
+    </div>
 
-		$.ajax({
-			url : url,
-			dataType : "html",
-			success : function(data) {
+    <div id="panel" class="panel">
+        <div class="panel-body">
+            <div class="panel-head-back">
+                <p><img src="images/icon_close.svg" onclick="AccessibePanelClose()" class="pt-3 px-3 close" alt="Close svg"></p>
+                <h2 class="text-light text-center">Дэлгэцийн тохиргоо</h2>
+            </div>
+            <div class="panel-center">
+                <div class="d-flex flex-column h-100">
+                    <div class="row-size mt-3">
+                        <div id="mobile-grid" class="d-flex justify-content-center h-100">
+                            <div class="box" id="boldText" onclick="BoldText()">
+                                <div class="items h-100 d-flex flex-column align-items-center justify-content-center text-center" id="toBold">
+                                    <img src="images/accessibility_icon_1.svg" id="textIcon" alt="Text icon">
+                                    <p>Фонт өргөсгөх</p>
+                                </div>
+                            </div>
+                            <div class="box" id="invertBody" onclick="InvertBody()">
+                                <div class="items h-100 d-flex flex-column align-items-center justify-content-center text-center">
+                                    <img src="images/accessibility_icon_2.svg" id="invertIcon" alt="Contrast icon">
+                                    <p>Дэлгэцийн ялгарал</p>
+                                </div>
+                            </div>
+                            <div class="box" id="highlightLink" onclick="HighlightLinks()">
+                                <div class="items h-100 d-flex flex-column align-items-center justify-content-center text-center">
+                                    <img src="images/accessibility_icon_3.svg" id="linkIcon" alt="Link icon">
+                                    <p>Холбоос тодруулах</p>
+                                </div>
+                            </div>
+                            <div class="box" id="mouseBody" onclick="ChangeMouse()">
+                                <div class="items h-100 d-flex flex-column align-items-center justify-content-center text-center">
+                                    <img src="images/accessibility_icon_4.svg" id="mouseIcon" alt="Computer mouse icon">
+                                    <p>Хулганы хэмжээ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-size my-3">
+                        <div class="d-flex justify-content-center h-100">
+                            <!-- <div class="box">
+                                <div class="items h-100 d-flex flex-column align-items-center justify-content-center">
+                                    <div class="d-flex align-content-center justify-content-center" >
+                                        <div class="px-3">
+                                            <img src="./assets/img/accessibe/accessibility_icon_4.svg" alt="Computer mouse icon">
+                                        </div>
+                                        <p>Хулганы хэмжээ</p>
+                                    </div>
+                                    <div class="w-75">
+                                        <div class="d-flex justify-content-between align-content-center accissibe-bg-1">
+                                            <div>
+                                                <img src="./assets/img/accessibe/Icon_down.svg" alt="Down icon">
+                                            </div>
+                                            <div style="padding-top: 5px;">
+                                                <p>Defualt</p>
+                                            </div>
+                                            <div>
+                                                <img src="./assets/img/accessibe/Icon_up.svg" alt="Up icon">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="box">
+                                <div class="items h-100 d-flex flex-column align-items-center justify-content-center">
+                                    <div class="d-flex align-content-center justify-content-center">
+                                        <div class="px-3">
+                                            <img src="images/accessibility_icon_5.svg" alt="Letter icon">
+                                        </div>
+                                        <p>Үсгийн хэмжээ</p>
+                                    </div>
+                                    <div class="w-75">
+                                        <div class="d-flex justify-content-between align-content-center accissibe-bg-1">
+                                            <div>
+                                                <img src="images/Icon_down.svg" id="btn-decrease" alt="Down icon">
+                                            </div>
+                                            <div style="padding-top: 5px;">
+                                                <p id="font-size-defualt">Default</p>
+                                            </div>
+                                            <div>
+                                                <img src="images/Icon_up.svg" id="btn-increase" alt="Up icon">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-size mb-3">
+                        <div class="d-flex justify-content-center h-100">
+                            <div class="box">
+                                <div class="items h-100 d-flex flex-column align-items-center justify-content-center">
+                                    <div class="d-flex align-content-center justify-content-center">
+                                        <div class="px-3">
+                                            <img src="images/accessibility_icon_6.svg" alt="Row space icon">
+                                        </div>
+                                        <p>Текстийн мөр хоорондын зай</p>
+                                    </div>
+                                    <div class="w-75">
+                                        <div class="d-flex justify-content-between align-content-center accissibe-bg-1">
+                                            <div>
+                                                <img src="images/Icon_down.svg" id="btn-decrease-line-height" alt="Down icon">
+                                            </div>
+                                            <div style="padding-top: 5px;">
+                                                <p id="line-height-defualt">Default</p>
+                                            </div>
+                                            <div>
+                                                <img src="images/Icon_up.svg" id="btn-increase-line-height" alt="Up icon">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="items h-100 d-flex flex-column align-items-center justify-content-center">
+                                    <div class="d-flex align-content-center justify-content-center">
+                                        <div class="px-3">
+                                            <img src="images/accessibility_icon_7.svg" alt="Letter space icon">
+                                        </div>
+                                        <p>Үсэг хоорондын зай</p>
+                                    </div>
+                                    <div class="w-75">
+                                        <div class="d-flex justify-content-between align-content-center accissibe-bg-1">
+                                            <div>
+                                                <img src="images/Icon_down.svg" id="letter-space-sub" alt="Down icon">
+                                            </div>
+                                            <div style="padding-top: 5px;">
+                                                <p id="letter-space-defualt">Default</p>
+                                            </div>
+                                            <div>
+                                                <img src="images/Icon_up.svg" id="letter-space-add" alt="Up icon">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100">
+                <a id="reset" class="text-center position-absolute bottom-0 w-100 text-decoration-none fw-light fs-6 back" onclick="SetDefault()">
+                    <img src="images/icon_reset.svg" alt="Reset image"> Бүх тохиргоог буцаах
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
-				window.location= url;
+<div class="footer custom-fixed">
+    <div id="footerFlexer" class="container-md ">
+        <p><a href="/">Нүүр хуудас</a></p>
+        <p><a href="/about">ДАН систем гэж юу вэ?</a></p>
+        <p><a href="/faq">Түгээмэл асуулт хариулт</a></p>
+        <p><a href="/tip">Ашиглах заавар</a></p>
+        <p><a href="/contact">Холбоо барих</a></p>
+        <p style="color: #637DAA;"><a>© 2018 - 2023 Бүх эрх хуулиар хамгаалагдсан</a></p>
+    </div>
+</div>
 
-			},
-			error : function(xhr, ajaxOptions, thrownError) {
+<script src="js/main.js"></script>
+<script src="js/accessibe.js"></script>
+<script src="js/jquery.min_1.js"></script>
+<script src="js/jquery.toast.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<script>
+    function darkModeV2(){
+        var dark = document.getElementById('isDarkMode');
+        let danImg = document.getElementById('danImg');
+        var nameValue = document.getElementById('darkModeValue');
+        var night = 'Шөнийн горим'
+        var day = 'Өдрийн горим'
+
+        document.body.classList.toggle("dark-theme");
+
+        if(document.body.classList.contains("dark-theme")){
+            dark.src = '/static/assets/img/moon.svg';
+            danImg.src = '/static/assets/img/dark-logo.webp';
+            nameValue.innerText = night;
+        } else {
+            dark.src = '/static/assets/img/sun.svg';
+            danImg.src = '/static/assets/img/light-logo.webp'
+            nameValue.innerText = day;
+        }
+    };
+
+    var mobile_mode = 'None'
+    if (!mobile_mode) {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            darkModeV2()
+        }
+    }
+
+    
+        
+    
+
+    
+        
+    
+
+</script>
 
 
-				parent.location.hash= hash;
-
-				//$("#wrongPassword").show();
-				$("#password").attr("placeholder","wrong password");
-				$("#password").val("");
-			}
-		});
-	}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 
 
-	$("#loginbutton").on("click", function() {
-		loadPage($("#password").val());
-	});
-	$("#password").keypress(function(e) {
-		if (e.which == 13) {
+     <script type="text/javascript" src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha1.js"></script>
 
-			loadPage($("#password").val());
-		}
-	});
-	$("#password").focus();
+    <script type="text/javascript">
+    "use strict";
 
-	</script>
 
-</body>
-</html>
+    function loadPage(pwd) {
+
+        var hash= pwd;
+        hash= Sha1.hash(pwd);
+        var url= hash + "/index.html";
+
+        $.ajax({
+            url : url,
+            dataType : "html",
+            success : function(data) {
+
+                window.location= url;
+
+            },
+            error : function(xhr, ajaxOptions, thrownError) {
+
+
+                parent.location.hash= hash;
+
+                //$("#wrongPassword").show();
+                $("#password").attr("placeholder","wrong password");
+                $("#password").val("");
+            }
+        });
+    }
+
+
+    $("#loginbutton").on("click", function() {
+        loadPage($("#password").val());
+    });
+    $("#password").keypress(function(e) {
+        if (e.which == 13) {
+
+            loadPage($("#password").val());
+        }
+    });
+    $("#password").focus();
+
+    </script>
+
+
+</body></html>

@@ -35,7 +35,7 @@
 }
 
 #zurag{
-    width: 130px;
+    width: 100px;
 }
 /* Dark mode colors */
 .dark-theme{
@@ -412,7 +412,7 @@ nav ul li a{
     margin-bottom: 100px;
 }
 .left-section img {
-    width: 80%;
+    width: 45%;
     display: block;
     margin: 0 auto;
 }

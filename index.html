@@ -512,43 +512,7 @@
 <script src="js/jquery.toast.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
 
-<script>
-    function darkModeV2(){
-        var dark = document.getElementById('isDarkMode');
-        let danImg = document.getElementById('danImg');
-        var nameValue = document.getElementById('darkModeValue');
-        var night = 'Шөнийн горим'
-        var day = 'Өдрийн горим'
 
-        document.body.classList.toggle("dark-theme");
-
-        if(document.body.classList.contains("dark-theme")){
-            dark.src = '/static/assets/img/moon.svg';
-            danImg.src = '/static/assets/img/dark-logo.webp';
-            nameValue.innerText = night;
-        } else {
-            dark.src = '/static/assets/img/sun.svg';
-            danImg.src = '/static/assets/img/light-logo.webp'
-            nameValue.innerText = day;
-        }
-    };
-
-    var mobile_mode = 'None'
-    if (!mobile_mode) {
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            darkModeV2()
-        }
-    }
-
-    
-        
-    
-
-    
-        
-    
-
-</script>
 
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>

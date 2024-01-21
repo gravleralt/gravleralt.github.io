@@ -34,6 +34,9 @@
     --lineH-16: 16px; */
 }
 
+#zurag{
+    width: 130px;
+}
 /* Dark mode colors */
 .dark-theme{
     /* --body-light-background: linear-gradient(111.07deg, #F8FBFF 0%, #EEF8FF 94.27%); */
@@ -312,9 +315,11 @@ nav ul li a{
     text-transform: uppercase;
     padding-top: 15px;
     padding-left: 15px;
+    margin-right: 15px;
     line-height: 33px;
     font-weight: 600;
     font-family: 'Golos Text', sans-serif;
+
     /* background-color: #f3ec78; */
     /* background-image: linear-gradient(90deg, #001D83 2.14%, #2048EC 112.04%); */
     background-image: var(--logo-text);

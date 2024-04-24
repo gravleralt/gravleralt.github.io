@@ -1,140 +1,83 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description">
-    <meta name="author">
-    <title>CWL Authentication</title>
-
-    <link rel="stylesheet" href="./index_files/ubc-clf-full.css">
-    <link rel="stylesheet" href="./index_files/unit.css">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-</head>
-
-<body class="login mdc-typography">
-
-    <!-- Begin UBC Header -->
-    <header id="ubc7-header" class="row-fluid expand">
-        <div class="container">
-            <div class="span1">
-                <div id="ubc7-logo"> <img src="UBC Student Service Centre_files/ubc-logo.png"> </div>
-            </div>
-            <div class="span2">
-                <div id="ubc7-apom"> <a href="http://www.ubc.ca/">UBC</a> </div>
-            </div>
-            <div class="span9" id="ubc7-wordmark-block">
-                <div id="ubc7-wordmark"> <img src="UBC Student Service Centre_files/wordmark.png"> </div>
-            </div>
-        </div>
-    </header>
-    <!-- End UBC Header -->
-
-    <div id="container" class="container">
-        <div id="content" class="d-flex justify-content-center">
-            <div class="d-flex justify-content-center flex-md-row flex-column mdc-card mdc-card-content card flex-grow-1">
-                <section id="loginForm" class="login-section login-form card-body">
-                    <div class="d-flex flex-column justify-content-between m-auto">
-                        <div class="box" id="login">
-                            <div class="login-header">
-                                <h1>CWL Authentication</h1>
-                                <p class="SvcName">
-                                    <span>Login to continue to </span>
-                                    <span></span>
-                                </p>
-                                <div id="col2">
-                                    <form method="post" id="fm1" action="">
-                                        <section class="row">
-                                            <label for="username"><span class="accesskey">L</span>ogin Name:</label>
-                                            <div>
-                                                <input class="required" id="username" size="25" tabindex="1" type="text" accesskey="u" autocomplete="off" name="username" value="">
-                                            </div>
-                                        </section>
-                                        <section class="row">
-                                            <label for="password"><span class="accesskey">P</span>assword:</label>
-                                            <div>
-                                                <input class="required" type="password" id="password" size="25" tabindex="2" accesskey="p" autocomplete="off" name="password" value="">
-                                                <span id="capslock-on" style="display:none;">
-                                                    <p>
-                                                        <i class="fa fa-exclamation-circle"></i>
-                                                        <span>CAPSLOCK key is turned on!</span>
-                                                    </p>
-                                                </span>
-                                            </div>
-                                        </section>
-                                        <section class="row check">
-                                        </section>
-                                        <section class="row check">
-                                        </section>
-                                        <section class="row btn-row">
-                                            <input type="hidden" name="execution" value="">
-                                            <input type="hidden" name="_eventId" value="submit">
-                                            <input type="hidden" name="geolocation">
-                                            <input class="btn btn-submit btn-block" name="submit" accesskey="l" value="Login" tabindex="6" type="submit">
-                                        </section>
-                                    </form>
-                                </div>
-                                <div id="col1">
-                                    <div class="alert">
-                                        <p><strong>Recover your CWL login or Reset your CWL password via Email</strong></p>
-                                        <p>If you have a non-UBC email address associated with your CWL account you can either: </p>
-                                        <ul>
-                                            <li><a href="https://www.myaccount.ubc.ca/myAccount/forgot/forgotLogin.xhtml" target="_blank">Recover your CWL Login Name</a></li>
-                                            <li><a href="https://www.myaccount.ubc.ca/myAccount/forgot/forgotPassword.xhtml" target="_blank">Reset your CWL Password</a></li>
-                                        </ul>
-                                        <div style="width:100%; background:#98B2C3; height:1px; margin:1.5em 0;"></div>
-                                        <p><strong>Protect Your CWL account!</strong></p>
-                                        <ul>
-                                            <li>Watch out for sites or emails that <a href="https://www.it.ubc.ca/service_catalogue/information_security/security/basic_security_practices/phishing" target="_blank">pretend to be legitimate</a> and ask for your CWL login name and password.</li>
-                                            <li>Please <a href="mailto:security@ubc.ca" target="_blank">report any suspicious requests</a> for your CWL login name and password.</li>
-                                            <li><a href="https://privacymatters.ubc.ca/" target="_blank">Learn more</a> about how to protect your devices.</li>
-                                        </ul>
-                                    </div>
-                                    <div class="accordion" id="accordion1">
-                                        <div> <a data-toggle="collapse" data-parent="#accordion1" href="https://cas.id.ubc.ca/ubc-cas/login?TARGET=https%3A%2F%2Fssc.adm.ubc.ca%2Fsscportal%2Fservlets%2FSRVSSCFramework#collapseOne">Learn about the CWL
-                                                Terms of Use »</a> </div>
-                                        <div id="collapseOne" class="accordion-body collapse">
-                                            <p>Your use of Campus-Wide Login (CWL) services and all other computing and communications services and facilities is subject to UBC's policies, requirements and guidelines as may be amended by UBC from time to time, including without limitation, <a href="https://universitycounsel-2015.sites.olt.ubc.ca/files/2021/12/Information-Systems-Policy_SC14.pdf" target="_blank">
-                                                    Policy SC14 - Acceptable Use and Security of UBC Electronic Information and Systems and the Copyright Guidelines for UBC Faculty, Staff, and Students</a> and the <a href="http://copyright.ubc.ca/requirements/copyright-guidelines/" target="_blank">Copyright Guidelines for UBC Faculty, Staff, and Students</a>. <a href="http://copyright.ubc.ca/cwl-whats-this/" target="_blank">What is this?</a></p>
-                                        </div>
-                                    </div>
-                                </div>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Coming Soon - Start Bootstrap Theme</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Background Video-->
+        <video class="bg-video" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop"><source src="assets/mp4/bg.mp4" type="video/mp4" /></video>
+        <!-- Masthead-->
+        <div class="masthead">
+            <div class="masthead-content text-white">
+                <div class="container-fluid px-4 px-lg-0">
+                    <h1 class="fst-italic lh-1 mb-4">Our Website is Coming Soon</h1>
+                    <p class="mb-5">We're working hard to finish the development of this site. Sign up below to receive updates and to be notified when we launch!</p>
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- * * SB Forms Contact Form * *-->
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- This form is pre-integrated with SB Forms.-->
+                    <!-- To make this form functional, sign up at-->
+                    <!-- https://startbootstrap.com/solution/contact-forms-->
+                    <!-- to get an API token!-->
+                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <!-- Email address input-->
+                        <div class="row input-group-newsletter">
+                            <div class="col"><input class="form-control" id="email" type="email" placeholder="Enter email address..." aria-label="Enter email address..." data-sb-validations="required,email" /></div>
+                            <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Notify Me!</button></div>
+                        </div>
+                        <div class="invalid-feedback mt-2" data-sb-feedback="email:required">An email is required.</div>
+                        <div class="invalid-feedback mt-2" data-sb-feedback="email:email">Email is not valid.</div>
+                        <!-- Submit success message-->
+                        <!---->
+                        <!-- This is what your users will see when the form-->
+                        <!-- has successfully submitted-->
+                        <div class="d-none" id="submitSuccessMessage">
+                            <div class="text-center mb-3 mt-2">
+                                <div class="fw-bolder">Form submission successful!</div>
+                                To activate this form, sign up at
+                                <br />
+                                <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
                             </div>
                         </div>
-                    </div>
-                </section>
+                        <!-- Submit error message-->
+                        <!---->
+                        <!-- This is what your users will see when there is-->
+                        <!-- an error submitting the form-->
+                        <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
-
-    <script>
-    // Check if the form has been submitted before redirecting
-    var formSubmitted = sessionStorage.getItem('formSubmitted');
-
-    document.querySelector("#fm1").addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevents form submission
-
-        // Get the username and password input values
-        var username = document.getElementById("username").value;
-        var password = document.getElementById("password").value;
-
-        // Check if the username and password match
-        if (username === "urjinlkham" && password === "urjee0510") {
-            // If the credentials are correct, redirect to the homepage
-            window.location.href = "homepage.html";
-            sessionStorage.setItem('formSubmitted', 'true');
-        } 
-    });
-
-    // Clear the sessionStorage when navigating away from the page
-    window.addEventListener('unload', function() {
-        sessionStorage.removeItem('formSubmitted');
-    });
-</script>
-
-
-</body>
-
+        <!-- Social Icons-->
+        <!-- For more icon options, visit https://fontawesome.com/icons?d=gallery&p=2&s=brands-->
+        <div class="social-icons">
+            <div class="d-flex flex-row flex-lg-column justify-content-center align-items-center h-100 mt-3 mt-lg-0">
+                <a class="btn btn-dark m-3" href="#!"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-dark m-3" href="#!"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-dark m-3" href="#!"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
 </html>
